@@ -367,7 +367,7 @@ class ListConverter implements IConverter {
       return value;
     }
 
-    var genericArgs = getGenericArgs(getTypeName(o));
+    var genericArgs = getGenericArgs(context.typeName ?? getTypeName(o));
     var toArgType = genericArgs.length > 0 ? genericArgs[0] : 'dynamic';
 
     List list = value;
